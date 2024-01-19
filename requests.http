@@ -1,0 +1,8 @@
+###
+POST http://localhost:9000/api/estrategia HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_estrategia" : "65a88a3ac2c47f81849db714",
+    "Estrategia" : "Realiza ejercicios mentales"
+}
