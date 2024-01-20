@@ -6,3 +6,35 @@ Content-Type: application/json
     "id_estrategia" : "65a88a3ac2c47f81849db714",
     "Estrategia" : "Realiza ejercicios mentales"
 }
+
+###
+POST http://3.81.42.104:9000/api/estrategia HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_estrategia" : "65a88a3ac2c47f81849db714",
+    "Estrategia" : "Come más frutas y verduras"
+}
+
+###
+POST http://3.81.42.104:9000/api/ejercicio HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_estilo" : "65a88a3ac2c47f81849db714",
+    "Ejercicio" : "Juega videojuegos de destreza mental"
+}
+
+###
+GET http://3.81.42.104:3002/ HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://3.81.42.104:9000/api/tarea HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_usuario" : "65aabdf3aa984d090c83c69e",
+    "fecha" : "2016-05-18T16:00:00Z",
+    "tarea" : "Hacer mas ejercicio"
+}

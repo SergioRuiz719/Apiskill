@@ -1,6 +1,5 @@
 const express = require('express');
-const Ejercicio = require('../models/ejercicio');
-const ejercicio = require('../models/ejercicio');
+const Ejercicio = require('../models/ejercicio'); // Asegúrate de tener el modelo correcto
 
 const router = express.Router();
 
@@ -30,8 +29,8 @@ router.post('/ejercicio', async (req, res) => {
 // Ruta para obtener todos los ejercicios
 router.get('/ejercicio', async (req, res) => {
     try {
-        ejercicio = await Ejercicio.find();
-        res.json({ 'elementos': ejercicio });
+        const ejercicios = await Ejercicio.find();
+        res.json({ 'elementos': ejercicios });
     } catch (error) {
         console.error('Error al obtener todos los ejercicios:', error);
         res.status(500).json({ 'error': 'Error interno del servidor' });
